@@ -1,0 +1,55 @@
+thief-MBP:local thief$ cd etc
+thief-MBP:etc thief$ ls -la
+total 32
+drwxr-xr-x   9 thief  admin   306  7  9 09:34 .
+drwxr-xr-x  28 root   wheel   952  9 22 18:57 ..
+drwxr-xr-x   6 thief  admin   204  9 21 19:42 bash_completion.d
+drwxr-xr-x  18 thief  admin   612 10 22 21:14 nginx
+lrwxr-xr-x   1 thief  admin    37  7  7 23:26 odbc.ini -> ../Cellar/unixodbc/2.3.4/etc/odbc.ini
+lrwxr-xr-x   1 thief  admin    41  7  7 23:26 odbcinst.ini -> ../Cellar/unixodbc/2.3.4/etc/odbcinst.ini
+drwxr-xr-x   8 thief  admin   272  6 21 22:41 openssl
+drwxr-xr-x   3 thief  admin   102  7  7 23:35 php
+-rw-r--r--   1 thief  admin  4945  7  9 09:34 wgetrc
+thief-MBP:etc thief$ pwd
+/usr/local/etc
+thief-MBP:etc thief$ 
+
+
+
+nginx 的配置文件 php 的配置文件
+
+
+thief-MBP:nginx thief$ cd /Users/thief/Documents/phpworkspace 
+thief-MBP:phpworkspace thief$ cd ../
+thief-MBP:Documents thief$ ls -l phpworkspace/
+total 24
+drwxr-xr-x  20 web_admin  staff   680  7 29 14:26 DemoJS
+drwxr-xr-x  21 web_admin  staff   714  7 24 19:02 JavaScriptStudy
+drwxr-xr-x  23 web_admin  staff   782  7 29 10:20 PHPEclipse
+drwxr-xr-x   6 web_admin  staff   204  7 29 09:50 Python
+-rw-r--r--@  1 web_admin  staff  5761  7 10 22:23 eclipse一直building workspace的解决办法 maven使用20160711_04.rtf
+-rw-r--r--   1 web_admin  staff    85  7 29 10:05 index.php
+drwxr-xr-x  31 web_admin  staff  1054  8 16 21:35 intelonline
+drwxr-xr-x@  4 web_admin  staff   136  7 10 22:19 maven使用20160711_03 eclipse变生版本m2eclipse.rtfd
+drwxr-xr-x   9 web_admin  staff   306  7 16 17:35 phptest
+drwxr-xr-x   7 web_admin  staff   238  7 15 23:10 phptest2
+thief-MBP:Documents thief$ cd /usr/local/etc
+thief-MBP:etc thief$ cd nginx/
+thief-MBP:nginx thief$ vi nginx.conf
+thief-MBP:nginx thief$ 
+
+
+
+nginx -s reload
+
+
+
+
+
+
+
+
+
+
+
+

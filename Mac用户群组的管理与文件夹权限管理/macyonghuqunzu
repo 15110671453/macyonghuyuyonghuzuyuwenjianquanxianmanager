@@ -1,0 +1,140 @@
+thief-MBP:var thief$ whoami
+thief
+thief-MBP:var thief$ groups www
+_www everyone localaccounts com.apple.sharepoint.group.4 _lpoperator com.apple.sharepoint.group.3 com.apple.sharepoint.group.1 com.apple.sharepoint.group.2
+thief-MBP:var thief$ groups thief
+wheel everyone staff localaccounts _appserverusr admin _appserveradm _lpadmin com.apple.sharepoint.group.1 com.apple.sharepoint.group.2 com.apple.sharepoint.group.4 _appstore _lpoperator _developer com.apple.access_ftp com.apple.access_screensharing-disabled com.apple.access_ssh-disabled com.apple.sharepoint.group.3
+thief-MBP:var thief$ id -a www
+uid=70(_www) gid=70(_www) groups=70(_www),12(everyone),61(localaccounts),704(com.apple.sharepoint.group.4),100(_lpoperator),703(com.apple.sharepoint.group.3),701(com.apple.sharepoint.group.1),702(com.apple.sharepoint.group.2)
+thief-MBP:var thief$ id -a thief
+uid=501(thief) gid=0(wheel) groups=0(wheel),12(everyone),20(staff),61(localaccounts),79(_appserverusr),80(admin),81(_appserveradm),98(_lpadmin),701(com.apple.sharepoint.group.1),702(com.apple.sharepoint.group.2),704(com.apple.sharepoint.group.4),33(_appstore),100(_lpoperator),204(_developer),395(com.apple.access_ftp),101(com.apple.access_screensharing-disabled),102(com.apple.access_ssh-disabled),703(com.apple.sharepoint.group.3)
+thief-MBP:var thief$ cd /etc/
+thief-MBP:etc thief$ ls -la
+total 3464
+drwxr-xr-x  124 root   wheel    4216 10 17 23:53 .
+drwxr-xr-x@   6 root   wheel     204  9 22 18:49 ..
+-rw-r--r--    1 root   wheel     515  9 10  2014 afpovertcp.cfg
+-rw-r--r--    1 root   wheel     515  7 31 03:32 afpovertcp.cfg~orig
+lrwxr-xr-x    1 root   wheel      15  9 22 18:48 aliases -> postfix/aliases
+-rw-r-----    1 root   wheel   16384  7 31 06:54 aliases.db
+drwxr-xr-x   11 root   wheel     374  9 22 18:54 apache2
+drwxr-xr-x   33 root   wheel    1122  9 22 18:57 asl
+-rw-r--r--    1 root   wheel    1051  7 31 06:39 asl.conf
+-rw-r--r--    1 root   wheel     149  8 30 09:08 auto_home
+-rw-r--r--    1 root   wheel     194  9 19  2014 auto_master
+-rw-r--r--    1 root   wheel     194  8 30 09:08 auto_master~orig
+-rw-r--r--    1 root   wheel    1935  8 30 09:08 autofs.conf
+-r--r--r--    1 root   wheel     265  7 31 05:06 bashrc
+-rw-r--r--    1 root   wheel    8909  8  1 11:27 bashrc_Apple_Terminal
+-r--r--r--    1 root   wheel    1653  7 16 11:53 bashrc~previous
+-rw-r--r--    1 root   wheel    1312 12  7  2015 bootpd.plist
+-rw-r--r--    1 root   wheel     780  8 30 08:56 com.apple.IPConfiguration.plist
+-rw-r--r--    1 root   wheel      82  7 31 11:52 com.apple.screensharing.agent.launchd
+-rw-r--r--    1 root   wheel     189  9 10  2014 csh.cshrc
+-rw-r--r--    1 root   wheel     189  7 31 05:08 csh.cshrc~orig
+-rw-r--r--    1 root   wheel     121  9 10  2014 csh.login
+-rw-r--r--    1 root   wheel     121  7 31 05:08 csh.login~orig
+-rw-r--r--    1 root   wheel      39  9 10  2014 csh.logout
+-rw-r--r--    1 root   wheel      39  7 31 05:08 csh.logout~orig
+drwxr-xr-x   20 root   _lp       680  9 22 18:57 cups
+drwxr-xr-x    3 root   wheel     102  7 31 04:43 defaults
+-rw-r--r--    1 root   wheel    2378  8  6 07:23 dnsextd.conf
+-rw-r--r--    1 root   wheel    1029  9 10  2014 efax.rc~previous
+drwxr-xr-x    4 root   wheel     136  7 31 08:07 emond.d
+-rw-r--r--    1 root   wheel       0  9 10  2014 find.codes
+-rw-r--r--    1 root   wheel       0  7 31 03:32 find.codes~orig
+-rw-r--r--    1 root   wheel     150  7 31 03:32 fstab.hd
+-rw-r--r--    1 root   wheel     150  9 10  2014 fstab.hd~previous
+-rw-r--r--    1 root   wheel      54  7 31 06:11 ftpd.conf
+-r--r--r--    1 root   wheel      54  7 31 06:11 ftpd.conf.default
+-rw-r--r--    1 root   wheel     119  9 10  2014 ftpusers
+-rw-r--r--    1 root   wheel     119  7 31 03:32 ftpusers~orig
+-rw-r--r--    1 root   wheel    5678  9 10  2014 gettytab
+-rw-r--r--    1 root   wheel    5678  7 31 03:32 gettytab~orig
+-rw-r--r--    1 root   wheel    2600  7 31 03:32 group
+-rw-r--r--    1 root   wheel    2345  7 13  2015 group~previous
+-rw-r--r--    1 root   wheel     675  7 20 20:52 hosts
+-rw-r--r--    1 root   wheel       0  7 31 03:32 hosts.equiv
+-rw-rw-rw-@   1 thief  wheel     542 12 28  2015 hosts.mamp.bak
+-rw-r--r--    1 root   wheel     213  7 31 03:32 hosts~orig
+-r--r--r--    1 root   wheel    1299  7 31 06:04 irbrc
+-rw-r--r--    1 root   wheel       0  7 31 03:32 kern_loader.conf
+-rw-r--r--    1 root   wheel       0  9 10  2014 kern_loader.conf~previous
+-rw-------    1 root   wheel    1946  9 22 18:57 krb5.keytab
+lrwxr-xr-x    1 root   wheel      33  9 22 18:54 localtime -> /usr/share/zoneinfo/Asia/Shanghai
+-rw-r--r--    1 root   wheel     616  7 31 05:07 locate.rc
+drwxr-xr-x    2 root   wheel      68  8  6 08:32 mach_init.d
+drwxr-xr-x    2 root   wheel      68  8  6 08:32 mach_init_per_login_session.d
+drwxr-xr-x    2 root   wheel      68  8  6 08:32 mach_init_per_user.d
+-rw-r--r--    1 root   wheel     106  9 10  2014 mail.rc
+-rw-r--r--    1 root   wheel     106  7 31 05:06 mail.rc~orig
+-rw-r--r--    1 root   wheel    4574  7 31 11:22 man.conf
+-rw-r--r--    1 root   wheel      36  7 31 03:32 manpaths
+-rw-------    1 root   wheel    5633  6 28  2014 master.passwd
+-rw-------    1 root   wheel    6858  7 31 03:32 master.passwd~orig
+-rw-r--r--    1 root   wheel  242153  9 10  2014 moduli~previous
+-rw-r--r--    1 root   wheel      11  7 31 05:06 nanorc
+-rw-r--r--    1 root   wheel      53  9 10  2014 networks
+-rw-r--r--    1 root   wheel      53  7 31 03:32 networks~orig
+-rw-r--r--    1 root   wheel    1318  7 31 04:43 newsyslog.conf
+drwxr-xr-x    7 root   wheel     238  9 14 08:51 newsyslog.d
+-rw-r--r--    1 root   wheel      43  9 10  2014 nfs.conf
+-rw-r--r--    1 root   wheel      43  7 31 06:02 nfs.conf~orig
+-rw-r--r--    1 root   wheel     303  7 31 04:58 notify.conf
+-rw-r--r--    1 root   wheel     414  7 31 05:42 ntp-restrict.conf
+-rw-r--r--@   1 root   wheel      27  8  8  2015 ntp.conf
+-rw-r--r--    1 root   wheel      23  7 31 06:53 ntp_opendirectory.conf
+drwxr-xr-x    9 root   wheel     306  9 22 18:54 openldap
+drwxr-xr-x   23 root   wheel     782  9 22 18:53 pam.d
+-rw-r--r--    1 root   wheel    5253  6 28  2014 passwd
+-rw-r--r--    1 root   wheel    6393  7 31 03:32 passwd~orig
+-rw-r--r--    1 root   wheel      45  9 10  2014 paths
+-rw-r--r--    1 root   wheel      45  7 31 03:32 paths~orig
+drwxr-xr-x    5 root   wheel     170  7 31 04:43 periodic
+drwxr-xr-x    3 root   wheel     102  7 31 05:53 pf.anchors
+-rw-r--r--    1 root   wheel    1027  7 31 05:53 pf.conf
+-rw-r--r--    1 root   wheel   28311  7 31 05:53 pf.os
+-rw-r--r--    1 root   wheel   22724  8  9 07:59 php-fpm.conf.default
+-r--r--r--    1 root   wheel   72289  8  9 08:00 php.ini.default
+-r--r--r--    1 root   wheel   65459  9 23  2014 php.ini.default-5.2-previous
+-r--r--r--    1 root   wheel   69266  2 26  2015 php.ini.default-previous
+drwxr-xr-x   33 root   wheel    1122  9 22 18:54 postfix
+drwxr-xr-x    4 root   wheel     136  9 22 18:53 ppp
+-r--r--r--    1 root   wheel     189  9 27  2014 profile
+-r--r--r--    1 root   wheel     189  7 31 05:06 profile~orig
+-rw-r--r--    1 root   wheel    6393  7 31 03:32 protocols
+-rw-r--r--    1 root   wheel    5766  9 10  2014 protocols~previous
+drwxr-xr-x    4 root   wheel     136  7 31 08:29 racoon
+-rw-r--r--    1 root   wheel    1560  8  6 08:35 rc.common
+-rw-r--r--    1 root   wheel    1561  9 10  2014 rc.common~previous
+-rw-r--r--    1 root   wheel    5258  8 30 08:56 rc.netboot
+lrwxr-xr-x    1 root   wheel      22  9 22 18:48 resolv.conf -> ../var/run/resolv.conf
+-rw-r--r--    1 root   wheel       0  7 31 03:32 rmtab
+-rw-r--r--    1 root   wheel    1735  7 31 03:32 rpc
+-rw-r--r--    1 root   wheel     971  9 10  2014 rpc~previous
+-rw-r--r--    1 root   wheel     891  8 30 08:54 rtadvd.conf
+-rw-r--r--    1 root   wheel     891  9 19  2014 rtadvd.conf~previous
+drwxr-xr-x    7 root   wheel     238  7 31 04:48 security
+-rw-r--r--    1 root   wheel  677972  7 31 03:32 services
+-rw-r--r--    1 root   wheel  678053  1 12  2015 services.broker
+-rw-r--r--    1 root   wheel  678134  1 12  2015 services~previous
+-rw-r--r--    1 root   wheel     179  9 10  2014 shells
+-rw-r--r--    1 root   wheel     179  7 31 03:32 shells~orig
+drwxr-xr-x    4 root   wheel     136  7 31 07:26 snmp
+drwxr-xr-x    7 root   wheel     238  9 22 18:54 ssh
+-rw-r--r--    1 root   wheel    3847  9 10  2014 ssh_config~orig
+-rw-r--r--    1 root   wheel    4062  6 28  2014 sshd_config~previous
+-r--r-----    1 root   wheel     257  7 31 05:02 sudo_lecture
+-r--r-----    1 root   wheel    1275  9 10  2014 sudoers
+drwxr-xr-x    2 root   wheel      68  7 31 05:02 sudoers.d
+-r--r-----    1 root   wheel    1563  7 31 05:02 sudoers~orig
+-rw-r--r--    1 root   wheel      96  7 31 06:39 syslog.conf
+-rw-r--r--    1 root   wheel      96  9 10  2014 syslog.conf~previous
+-rw-r--r--    1 root   wheel    1316  7 31 03:32 ttys
+-rw-r--r--    1 root   wheel    1316  9 10  2014 ttys~previous
+-rw-r--r--    1 root   wheel       0  7 31 03:32 xtab
+-r--r--r--    1 root   wheel     126  7 31 05:19 zprofile
+-r--r--r--    1 root   wheel     140  7 31 05:19 zshrc
+thief-MBP:etc thief$ vi passwd
+thief-MBP:etc thief$ vi group
+thief-MBP:etc thief$ 
